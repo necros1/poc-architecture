@@ -1,0 +1,16 @@
+views {
+    view miPass of miPass {
+        title 'Mi Pass / Architecture / Overview'
+        
+        include miPass
+        autoLayout LeftRight
+    }
+
+    view miPassModules of miPass {
+        title 'Mi Pass / Architecture / Modules'
+        include miPass
+        include miPass.administracion
+
+        autoLayout LeftRight
+    }
+}

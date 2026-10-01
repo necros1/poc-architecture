@@ -1,0 +1,52 @@
+specification {
+    element person {
+        style {
+            shape person
+            color primary
+        }
+    }
+    element system {
+        style {
+            shape rectangle
+            color primary
+            opacity 15%
+            border solid
+        }
+    }
+    element externalSystem {
+        style {
+            shape rectangle
+            color muted
+            opacity 60%
+            border dashed
+        }
+    }
+    element module {
+        style {
+            shape rectangle
+            color secondary
+            opacity 15%
+            border solid
+        }
+    }
+    element container {
+        style {
+            shape rectangle
+            color customColor1
+        }
+    }
+    element component {
+        style {
+            shape rectangle
+            color secondary
+            size sm
+            textSize sm
+        }
+    }
+    element database {
+        style {
+            shape storage
+            color green
+        }
+    }
+}

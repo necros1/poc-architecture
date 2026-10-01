@@ -1,0 +1,7 @@
+views {
+    view miPassAdministracion of miPass.administracion {
+        title 'Mi Pass / Architecture / Module / Administracion'
+        
+        include *
+    }
+}

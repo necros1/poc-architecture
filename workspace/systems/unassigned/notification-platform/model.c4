@@ -1,0 +1,5 @@
+model {
+    emailService = container 'SRV.001395_2.0.EnviarCorreo' {
+        description 'Servicio transversal de envío de correo'
+    }
+}

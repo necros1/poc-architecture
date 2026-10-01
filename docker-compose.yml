@@ -1,0 +1,17 @@
+services:
+  likec4:
+    image: likec4/likec4:1.59.4
+    container_name: ${LIKEC4_CONTAINER_NAME:-architecture-poc-likec4}
+    working_dir: /data
+    volumes:
+      - ./workspace:/data
+    ports:
+      - "${LIKEC4_PORT:-5173}:5173"
+      - "${LIKEC4_HMR_PORT:-24678}:${LIKEC4_HMR_PORT:-24678}"
+    environment:
+      CHOKIDAR_USEPOLLING: "1"
+      CHOKIDAR_INTERVAL: "200"
+      HMR_PORT: ${LIKEC4_HMR_PORT:-24678}
+    init: true
+    tty: true
+    command: start --hmr -port ${LIKEC4_HMR_PORT:-24678}

@@ -1,0 +1,15 @@
+model {
+    miPass.administracion.miPerfilFrontend -> miPass.administracion.bff 'Uses'
+    miPass.administracion.miPerfilFrontend -> miPass.administracion.miPerfilSeguridad 'Uses'
+
+    miPass.administracion.bff -> miPass.administracion.miPerfilSeguridad 'Uses'
+    miPass.administracion.bff -> miPass.administracion.cajaDesafioWebUtils 'Uses'
+
+    miPass.administracion.rootPortalPersona -> miPass.administracion.miPerfilFrontend 'Uses'
+    
+    miPass.administracion.miPerfilSeguridad -> miPass.administracion.cajaDesafioWebUtils 'Uses'
+    
+    miPass.administracion.cajaDesafioWebUtils -> softoken 'Uses'
+    miPass.administracion.cajaDesafioWebUtils -> validarDispositivoSeguridad 'Uses' 
+    miPass.administracion.bff -> securitySoftoken 'Uses'
+}

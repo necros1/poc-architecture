@@ -1,0 +1,8 @@
+views {
+    view iep of iep {
+        title 'Instrucción Especial de Pago (IEP) / Architecture / Overview'
+        
+        include iep
+        autoLayout LeftRight
+    }
+}

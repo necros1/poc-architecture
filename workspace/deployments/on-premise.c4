@@ -1,0 +1,35 @@
+deployment {
+    extend production {
+        onPrem = onPremise 'On-Premise'{
+            description 'On-Premise infrastructure'
+            style {
+                color customonPremise
+                icon @onPrem/server.png
+            }
+            
+            weblogicSecurity = applicationServer 'WebLogic Server - Bus 11g' {
+                description 'WebLogic Server hosting security integration services'
+                securityServiceBus = serviceBus 'osb2prod01/02'{
+                    description 'Service Bus hosting security services'
+                }
+            }
+            weblogicBus = applicationServer 'WebLogic Server - Bus N1 12c' {
+                serviceBus = serviceBus 'OSB_Domain_CV/LGVL' {
+                    description 'Shared enterprise Service Bus'
+                }
+            }
+            dataPowerGateway = dataPower 'DataPower Gateway' {
+                description 'Shared DataPower integration platform'
+                apiConnectDomain = dataPowerDomain 'Api Connect <<Datos Sensibles>>' {
+                    description 'DataPowwer domain for API Connect'
+                    externalRestGateway = multiProtocolGateway 'mpg-externo-rest' {
+                        description 'Solicitud de financiamiento'
+                    }
+                }
+                multiProtocolGateway = multiProtocolGateway 'Multi-Protocol Gateway' {
+                    description 'DataPower Multi-Protocol Gateway'
+                }
+            }
+        }
+    }
+}

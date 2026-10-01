@@ -1,0 +1,43 @@
+views {
+    
+    deployment view miPassAdministracionModule {
+        title 'Mi Pass / Deployment / Module / Administracion'
+
+        includeAncestors: true
+
+        // Workloads asociados a Mi Pass.
+        // Automático, pero requiere #miPass en cada deployment instance.
+        include * where tag is #miPass
+
+        // include production.oci.ociRegion.transversalOkeCluster.appNipp.cajaDesafioWebUtilsInstance
+        //     -> production.onPrem.weblogicSecurity.securityServiceBus.softokenInstance
+        // include production.oci.ociRegion.transversalOkeCluster.appNipp.cajaDesafioWebUtilsInstance
+        //     -> production.onPrem.weblogicSecurity.securityServiceBus.validarDispositivoSeguridadInstance
+
+        //shared ingress infraestructure
+        include production.incapsula
+            -> production.oci.ociRegion.ohsPersonas
+
+        // Dependencias compartidas On-Premise.
+    
+        // include production.oci.ociRegion.transversalOkeCluster.appNipp.bffInstance
+        //     -> production.onPrem.dataPowerGateway.apiConnectDomain.externalRestGateway
+
+        // include production.oci.ociRegion.transversalOkeCluster.appNipp.miPerfilSeguridadInstance
+        //     -> production.onPrem.dataPowerGateway.apiConnectDomain.externalRestGateway
+
+        
+        // include production.onPrem.dataPowerGateway.apiConnectDomain.externalRestGateway
+        //     -> production.onPrem.serviceBus.emailServiceInstance
+
+        // //Shared security services
+        // include production.oci.ociRegion.transversalOkeCluster.crossSeguridad
+        //     -> production.onPrem.weblogicSecurity.securityServiceBus.softokenInstance
+
+        // include production.oci.ociRegion.transversalOkeCluster.crossSeguridad
+        //     -> production.onPrem.weblogicSecurity.securityServiceBus.validarDispositivoSeguridadInstance
+        
+
+        autoLayout LeftRight
+    }
+}

@@ -1,0 +1,30 @@
+deployment {
+    extend production {
+        oci = cloudProvider 'OCI' {
+            description 'Oracle Cloud Infraestructure'
+            style{
+                color customOci
+                icon tech:oracle
+            }
+            
+            ociRegion = region 'OCI Region'{
+                description 'OCI development region'
+                style {
+                    size xl
+                    iconSize xl
+                    icon @oci/networking/vcn-region-identifier.png
+                }
+
+                ohsPersonas = webServer 'Oracle OHS Persona' {
+                    description 'Oracle HTTP Server for Personas'
+                }
+                transversalOkeCluster = kubernetesCluster 'OKE Cluser - <<psclprocioketransversal01>>'{
+                    description 'Shared transversal OKE cluster'
+                    
+                    appNipp = namespace 'Namespace << app-nipp >>'
+                    crossSeguridad = namespace 'Namespace << cross-seguridad >>'
+                }
+            }
+        }
+    }
+}

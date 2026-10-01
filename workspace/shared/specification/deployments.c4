@@ -1,0 +1,80 @@
+specification {
+    deploymentNode environment {
+        style {
+            shape rectangle
+            color muted
+        }
+    }
+    deploymentNode cloudProvider {
+        style {
+            shape rectangle
+            color primary
+        }
+    }
+    deploymentNode onPremise {
+        style {
+            shape rectangle
+            color primary
+        }
+    }
+    deploymentNode region {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode kubernetesCluster {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode namespace {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode dataPower {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode dataPowerDomain{
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode multiProtocolGateway {
+        style {
+            shape rectangle
+            color customColor1
+        }
+    }
+    deploymentNode serviceBus {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode webServer {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode securityGateway {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+    deploymentNode applicationServer {
+        style {
+            shape rectangle
+            color secondary
+        }
+    }
+}

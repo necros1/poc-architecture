@@ -1,0 +1,8 @@
+model {
+    notificationPlatform = externalSystem 'Notification Platform' {
+        description 'External platform for customer notifications'
+        metadata {
+            scope: "External"
+        }
+    }
+}

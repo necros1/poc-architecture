@@ -1,0 +1,8 @@
+specification {
+    tag changeModified {
+        color red
+    }
+    tag changeNew {
+        color green
+    }
+}

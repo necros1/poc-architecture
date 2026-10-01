@@ -1,0 +1,6 @@
+specification {
+    color customColor1 #F5F5DC
+    color customOci #F4A261
+    color customAws #FF9900
+    color customonPremise #2C3E50
+}

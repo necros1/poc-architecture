@@ -1,0 +1,7 @@
+views {
+    view index {
+        title 'Architecture Landscape'
+        
+        autoLayout LeftRight
+    }
+}

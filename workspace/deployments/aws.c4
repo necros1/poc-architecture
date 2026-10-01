@@ -1,0 +1,19 @@
+deployment {
+    extend production {
+        aws = cloudProvider 'AWS' {
+            description 'Amazon Web Services'
+            style{
+                color customAws
+                icon tech:aws
+            }
+            
+            awsRegion = region 'AWS Region'{
+                description 'AWS development region'
+                eksCluster = kubernetesCluster 'EKS Cluster'{
+                    description 'Amazon Elastic Kubernetes Service development'
+                    icon aws:eks-cloud
+                }
+            }
+        }
+    }
+}

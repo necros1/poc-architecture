@@ -1,0 +1,6 @@
+deployment {
+    environment production {
+        description 'Production deployment environment'
+    }
+    
+}

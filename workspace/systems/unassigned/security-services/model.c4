@@ -1,0 +1,12 @@
+model {
+    securitySoftoken = container 'ms-seguridad-softoken' {
+        description 'Microservicio transversal utilizado para la administración de Mi Pass'
+    }
+    softoken = container 'CS001016_sofToken' {
+        description 'Servicio transversal para validación de SofToken'
+
+    }
+    validarDispositivoSeguridad = container 'CS001176_ValidarDispositivoSeguridad'{
+        description 'Servicio transversal para validación de dispositivo de seguridad'
+    }
+}

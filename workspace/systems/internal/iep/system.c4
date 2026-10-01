@@ -1,0 +1,10 @@
+model {
+    iep = system 'Instrucción Especial de Pago (IEP)' {
+        #iep
+        description 'Gestiona el ciclo completo de registro, revisión y aprobación de las operaciones de crédito para compra de cartera. Concentra en un único flujo de trabajo la coordinación entre los distintos actores del banco: desde la recepción inicial de un caso hasta su consolidación contable al cierre del día.'
+        metadata {
+            OrganizationalScope: "Departamental"
+            owner: "Architecture"
+        }
+    }
+}

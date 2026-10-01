@@ -1,0 +1,7 @@
+deployment {
+    extend production {
+        incapsula = securityGateway 'Incapsula' {
+            description 'Security gateway for Personas traffic'
+        }
+    }
+}

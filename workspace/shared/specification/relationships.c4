@@ -1,0 +1,27 @@
+specification {
+    relationship uses {
+        title 'Uses'
+    }
+    relationship sync {
+        title 'Synchronous'
+        line solid
+    }
+    relationship async {
+        title 'Asynchronous'
+        line dotted
+    }
+    relationship reads {
+        title 'Reads'
+    }
+    relationship writes {
+        title 'Writes'
+    }
+    relationship publishes {
+        title 'Publishes'
+        line dotted
+    }
+    relationship subscribes {
+        title 'Subscribes'
+        line dotted
+    }
+}

@@ -1,0 +1,7 @@
+model {
+    extend miPass {
+        administracion = module 'Administración'{
+            description 'Administración de Mi Pass'
+        }
+    }
+}

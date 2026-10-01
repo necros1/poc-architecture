@@ -1,0 +1,10 @@
+model {
+    miPass = system 'Mi Pass' {
+        #miPass
+        description 'Mi pass'
+        metadata {
+            OrganizationalScope: "Enterprise"
+            owner: "Architecture"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+model {
+    identityProvider = externalSystem 'Identity Provider' {
+        description 'External identity and authentication provider'
+        metadata {
+            scope: "External"
+        }
+    }
+}

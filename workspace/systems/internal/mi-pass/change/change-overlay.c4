@@ -1,0 +1,21 @@
+model {
+    extend miPass.administracion.miPerfilSeguridad{
+        #changeModified
+    }
+    extend miPass.administracion.miPerfilFrontend {
+        #changeModified
+    }
+    extend miPass.administracion.bff {
+        #changeNew
+    }
+    extend securitySoftoken {
+        #changeNew
+    }
+    
+}
+
+deployment {
+    extend  production.onPrem.dataPowerGateway.apiConnectDomain.externalRestGateway {
+        #changeModified
+    }
+}

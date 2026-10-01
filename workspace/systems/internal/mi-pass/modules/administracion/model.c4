@@ -1,0 +1,12 @@
+model {
+    extend miPass.administracion {
+        
+        cajaDesafioWebUtils = container 'CajaDesafioWebUtils'
+        bff = container 'bff-pper-perfil-seguridad'
+        miPerfilSeguridad = container 'ms-mi-perfil-seguridad-rest-app'
+        miPerfilFrontend = container 'mf-fenix-mi-perfil-persona'
+        rootPortalPersona = container 'mf-root-portal-persona' {
+            description 'Portal frontend utilizado para acceder a Administración Mi Pass'
+        }        
+    }
+}
